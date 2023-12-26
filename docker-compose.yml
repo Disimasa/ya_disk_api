@@ -1,0 +1,13 @@
+name: yandex_disc_api
+
+services:
+  backend:
+    build:
+      context: ./app
+      dockerfile: Dockerfile
+    env_file: ./app/.env
+    ports:
+      - '8080:8080'
+    restart: always
+    volumes:
+      - ./app:/app
